@@ -7,42 +7,49 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="home">
-      <h4 class="messageTime">
-        messageTime ends on Sunday, 24 April 2020, 8:00am
-      </h4>
-      <div class="deadline">
-        <div class="deadline-format">
-          <div>
-            <h4 class="days">34</h4>
-            <span>jours</span>
+    <div class="container">
+      <div class="home">
+        <h4 class="messageTime">
+          messageTime ends on Sunday, 24 April 2020, 8:00am
+        </h4>
+        <div class="deadline">
+          <div class="deadline-format">
+            <div>
+              <h4 class="days">34</h4>
+              <span>jours</span>
+            </div>
+          </div>
+          <div class="deadline-format">
+            <div>
+              <h4 class="hours">34</h4>
+              <span>heur</span>
+            </div>
+          </div>
+          <div class="deadline-format">
+            <div>
+              <h4 class="minutes">34</h4>
+              <span>min</span>
+            </div>
+          </div>
+          <div class="deadline-format">
+            <div>
+              <h4 class="seconds">34</h4>
+              <span>sec</span>
+            </div>
           </div>
         </div>
-        <div class="deadline-format">
-          <div>
-            <h4 class="hours">34</h4>
-            <span>heur</span>
-          </div>
+        <div class="img-container">
+          <img src="/claire.jpg" alt="claire" class="claire">
+          <button class="playbtn">click me</button>
         </div>
-        <div class="deadline-format">
-          <div>
-            <h4 class="minutes">34</h4>
-            <span>min</span>
-          </div>
-        </div>
-        <div class="deadline-format">
-          <div>
-            <h4 class="seconds">34</h4>
-            <span>sec</span>
-          </div>
-        </div>
+        
       </div>
+     <div class="header">
+       <video controls muted  class="hide video-container">
+         <source src="./claire.mp4" type="video/mp4" />
+       </video>
+     </div>
     </div>
-   <div class="header">
-     <video controls muted  class="video-container">
-       <source src="./claire.mp4" type="video/mp4" />
-     </video>
-   </div>
     <script src="app.js"></script>
   </body>
 </html>

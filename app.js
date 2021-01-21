@@ -63,13 +63,16 @@ function getRemaindingTime(x) {
 let countdown = setInterval(() => getRemaindingTime(futureDate), 1000);
 getRemaindingTime(futureDate);
 
-const playbtn = document.querySelector('.switch-btn');
+const playbtn = document.querySelector('.playbtn');
+
 const video = document.querySelector('.video-container');
 
 playbtn.addEventListener('click', function() {
 	video.play();
+	setTimeout(() => (video.style.opacity = 1), 2000);
+	setTimeout(() => (video.style.opacity = 0), 14200);
 });
 
-// window.addEventListener('load', function() {
-// 	preloader.classList.add('hide-preloader');
-// });
+window.addEventListener('load', function() {
+	video.style.opacity = 0;
+});
