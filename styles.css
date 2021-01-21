@@ -27,22 +27,24 @@ body {
 	background: rgb(240, 241, 223);
 	color: rgb(182, 93, 42);
 	padding: 0.375rem 0.75rem;
-	letter-spacing: .25rem;
+	letter-spacing: .15rem;
 	transition: all .3s linear;
-	font-size: 0.875rem;
+	font-size: 0.65rem;
 	border: 2px solid rgb(201, 140, 71);
 	cursor: pointer;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 	border-radius: .5rem;
 	animation: bounce 2s linear infinite;
+	margin: 1rem 2rem;
 	display: none;
 }
+
 @keyframes bounce {
 	0% {
 		transform: scale(1);
 	}
 	50% {
-		transform: scale(1.5);
+		transform: scale(1.2);
 	}
 	100% {
 		transform: scale(1);
@@ -126,7 +128,7 @@ body {
 	height: 100%;
 	background: url('./left.png');
 	transition: 1.5s ease-out;
-	animation: openleft 1.9s 3s ease-out forwards;
+	animation: openleft 1.9s 1s ease-out forwards;
 }
 .home::after {
 	content: '';
@@ -137,7 +139,7 @@ body {
 	height: 100%;
 	background: url('./right.png');
 	transition: 1.5s ease-out;
-	animation: openright 1.9s 3s ease-out forwards;
+	animation: openright 1.9s 1s ease-out forwards;
 }
 
 @keyframes openleft {
@@ -159,13 +161,14 @@ body {
 	width: 100%;
 	height: 100%;
 	z-index: 111;
+	pointer-events: none;
 }
 .single-box li {
 	position: absolute;
 	display: block;
 	list-style: none;
-	width: 25px;
-	height: 25px;
+	width: 115px;
+	height: 115px;
 	background: rgba(255, 255, 255, 0.2);
 	animation: animate-box 20s linear infinite;
 	bottom: -150px;
@@ -176,13 +179,16 @@ body {
 	width: 60px;
 	height: 60px;
 	animation-delay: -1s;
-	background: rgba(255, 255, 255, 0.2);
+	background: url('./1.jpg');
+	background-size: cover;
 	background-size: cover;
 }
 .single-box li:nth-child(2) {
 	left: 12%;
-	width: 30px;
-	height: 30px;
+	width: 40px;
+	height: 40px;
+	background: url('./2.jpg');
+	background-size: cover;
 	animation-delay: 5s;
 	animation-duration: 10s;
 }
@@ -192,29 +198,34 @@ body {
 	height: 100px;
 	animation-delay: 1s;
 	bottom: -29rem;
-	background: rgba(255, 255, 255, 0.2);
+	background: url('./3.jpg');
+	background-size: cover;
 }
 .single-box li:nth-child(4) {
 	left: 42%;
-	width: 50px;
-	height: 50px;
+	width: 120px;
+	height: 120px;
 	animation-delay: 3s;
 	animation-duration: 8s;
-	background: rgba(255, 255, 255, 0.2);
+	background: url('./4.jpg');
+	background-size: cover;
 }
 .single-box li:nth-child(5) {
 	left: 65%;
-	width: 45px;
-	height: 45px;
+	width: 55px;
+	height: 55px;
+	background: url('./5.jpg');
+	background-size: cover;
 	animation-delay: -.2s;
 	bottom: 0;
 }
 .single-box li:nth-child(6) {
-	left: 15%;
+	left: 85%;
 	width: 10rem;
 	height: 10rem;
 	animation-delay: 2.3s;
-	background: rgba(255, 255, 255, 0.2);
+	background: url('./6.jpg');
+	background-size: cover;
 	bottom: -30rem;
 }
 .single-box li:nth-child(7) {
@@ -222,7 +233,8 @@ body {
 	width: 110px;
 	height: 110px;
 	animation-delay: -.7s;
-	background: rgba(255, 255, 255, 0.2);
+	background: url('./7.jpg');
+	background-size: cover;
 }
 .single-box li:nth-child(8) {
 	left: 5%;
@@ -230,7 +242,8 @@ body {
 	height: 4rem;
 	animation-delay: 4.5s;
 	bottom: -250px;
-	background: rgba(255, 255, 255, 0.2);
+	background: url('./8.jpg');
+	background-size: cover;
 }
 .single-box li:nth-child(9) {
 	left: 55%;
@@ -238,6 +251,8 @@ body {
 	height: 2rem;
 	animation-delay: 3.3s;
 	bottom: -25rem;
+	background: url('./9.jpg');
+	background-size: cover;
 }
 .single-box li:nth-child(10) {
 	left: 59%;
@@ -245,7 +260,8 @@ body {
 	height: 10rem;
 	animation-delay: 5.5s;
 	bottom: -25rem;
-	background: rgba(255, 255, 255, 0.2);
+	background: url('./10.jpg');
+	background-size: cover;
 }
 @keyframes animate-box {
 	0% {

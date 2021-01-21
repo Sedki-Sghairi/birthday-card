@@ -12,16 +12,18 @@ const months = [
 	'November',
 	'December'
 ];
+
 const weekdays = [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ];
 const messageTime = document.querySelector('.messageTime');
 const deadline = document.querySelector('.deadline');
 const items = document.querySelectorAll('.deadline-format h4');
+const playbtn = document.querySelector('.playbtn');
 let tempDate = new Date();
 let tempYear = tempDate.getFullYear();
 let tempMonth = tempDate.getMonth();
 let tempDay = tempDate.getDate();
 // const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0);
-// let futureDate = new Date(2021, 0, 20, 18, 50, 0);
+
 let futureDate = new Date(2021, 0, 22, 0, 0, 0);
 const year = futureDate.getFullYear();
 const hours = futureDate.getHours();
@@ -34,7 +36,6 @@ function getRemaindingTime(x) {
 	const futureTime = x.getTime();
 	const today = new Date().getTime();
 	const t = futureTime - today;
-
 	const oneDay = 24 * 60 * 60 * 1000;
 	const oneHour = 60 * 60 * 1000;
 	const oneMinute = 60 * 1000;
@@ -53,19 +54,16 @@ function getRemaindingTime(x) {
 	items.forEach(function(item, index) {
 		item.innerHTML = format(values[index]);
 	});
-	if (t < 0) {
+	if (t <= 0) {
 		clearInterval(countdown);
-
-		// setTimeout(console.log('ok'), 5000);
+		playbtn.style.display = 'block';
 	}
 }
 let countdown = setInterval(() => getRemaindingTime(futureDate), 1000);
 getRemaindingTime(futureDate);
 
-const playbtn = document.querySelector('.playbtn');
-
 const video = document.querySelector('.video-container');
-
+video.style.opacity = 0;
 playbtn.addEventListener('click', function() {
 	video.play();
 	setTimeout(() => (video.style.opacity = 1), 2000);
@@ -74,8 +72,4 @@ playbtn.addEventListener('click', function() {
 		messageTime.textContent = ` Amelie et Sedki te souhaitent un joyeux anniversaire!`;
 		deadline.style.display = 'none';
 	}, 3300);
-});
-
-window.addEventListener('load', function() {
-	video.style.opacity = 0;
 });
