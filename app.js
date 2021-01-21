@@ -30,7 +30,6 @@ let month = futureDate.getMonth();
 month = months[month];
 const weekday = weekdays[futureDate.getDay()];
 const date = futureDate.getDate();
-messageTime.textContent = `you can see the actual content of this page on: ${weekday}, ${date} ${month} ${year} ${hours}:${minutes}am`;
 function getRemaindingTime(x) {
 	const futureTime = x.getTime();
 	const today = new Date().getTime();
@@ -56,8 +55,8 @@ function getRemaindingTime(x) {
 	});
 	if (t < 0) {
 		clearInterval(countdown);
-		deadline.innerHTML = `<h4 class="expired">this messageTime has expired!</h4>`;
-		setTimeout(console.log('ok'), 5000);
+
+		// setTimeout(console.log('ok'), 5000);
 	}
 }
 let countdown = setInterval(() => getRemaindingTime(futureDate), 1000);
@@ -71,6 +70,10 @@ playbtn.addEventListener('click', function() {
 	video.play();
 	setTimeout(() => (video.style.opacity = 1), 2000);
 	setTimeout(() => (video.style.opacity = 0), 14200);
+	setTimeout(() => {
+		messageTime.textContent = ` Amelie and Sedki t'aime beaucoup!`;
+		deadline.style.display = 'none';
+	}, 3300);
 });
 
 window.addEventListener('load', function() {

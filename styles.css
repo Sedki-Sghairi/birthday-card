@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap');
 *,
 ::after,
 ::before,
@@ -30,10 +32,22 @@ body {
 	cursor: pointer;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 	border-radius: .5rem;
+	animation: bounce 2s linear infinite;
+}
+@keyframes bounce {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		transform: scale(1);
+	}
 }
 .playbtn:hover {
 	color: #fff;
-	background: #000;
+	background: rgb(201, 140, 71);
 }
 .claire {
 	max-width: 400px;
@@ -57,14 +71,21 @@ body {
 	letter-spacing: 2px;
 	font-size: 0.85rem;
 }
+
 .deadline h4 {
 	font-size: 2rem;
 	margin-bottom: 0.25rem;
 	letter-spacing: .23rem;
+	color: rgb(97, 36, 36);
+	font-family: 'Fredericka the Great', cursive;
 }
 .messageTime {
-	font-size: 1.5rem;
-	color: rgb(88, 81, 81);
+	font-size: 2rem;
+	color: rgb(138, 65, 37);
+	font-family: 'Princess Sofia', cursive;
+	padding: 1rem;
+	transition: all .5s linear;
+	letter-spacing: .14rem;
 }
 
 .video-container {
@@ -80,7 +101,8 @@ body {
 .home {
 	width: 100%;
 	height: 100vh;
-	background: linear-gradient(90deg, #c9e25c, #4fddf4, #fff);
+	background: url('/balloon.jpg');
+	background-size: cover;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -107,11 +129,7 @@ body {
 	transition: 1.5s ease-out;
 	animation: openright 1.9s 5s ease-out forwards;
 }
-/* .home:hover::before {
-	transform: translate(-100%);
-}
-.home:hover::after {
-	transform: translate(100%); */
+
 @keyframes openleft {
 	100% {
 		transform: translate(-100%);
