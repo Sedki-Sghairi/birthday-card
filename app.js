@@ -22,9 +22,9 @@ let tempDate = new Date();
 let tempYear = tempDate.getFullYear();
 let tempMonth = tempDate.getMonth();
 let tempDay = tempDate.getDate();
-// const futureDate = new Date(tempYear, tempMonth, tempDay + 10, 11, 30, 0);
 
 let futureDate = new Date(2021, 0, 22, 0, 0, 0);
+
 const year = futureDate.getFullYear();
 const hours = futureDate.getHours();
 const minutes = futureDate.getMinutes();
@@ -32,8 +32,8 @@ let month = futureDate.getMonth();
 month = months[month];
 const weekday = weekdays[futureDate.getDay()];
 const date = futureDate.getDate();
-function getRemaindingTime(x) {
-	const futureTime = x.getTime();
+const futureTime = futureDate.getTime();
+function getRemaindingTime() {
 	const today = new Date().getTime();
 	const t = futureTime - today;
 	const oneDay = 24 * 60 * 60 * 1000;
@@ -54,13 +54,16 @@ function getRemaindingTime(x) {
 	items.forEach(function(item, index) {
 		item.innerHTML = format(values[index]);
 	});
-	if (t <= 0) {
+	if (t < 0) {
 		clearInterval(countdown);
+		items.forEach(function(item) {
+			item.innerHTML = '00';
+		});
 		playbtn.style.display = 'block';
 	}
 }
-let countdown = setInterval(() => getRemaindingTime(futureDate), 1000);
-getRemaindingTime(futureDate);
+let countdown = setInterval(getRemaindingTime, 1000);
+getRemaindingTime();
 
 const video = document.querySelector('.video-container');
 video.style.opacity = 0;

@@ -21,16 +21,20 @@ body {
 	align-items: center;
 	justify-content: space-around;
 }
-
+@media only screen and (max-width: 600px) {
+	.img-container {
+		flex-direction: column;
+	}
+}
 .playbtn {
 	text-transform: uppercase;
 	background: rgb(240, 241, 223);
-	color: rgb(182, 93, 42);
+	color: rgb(34, 80, 110);
 	padding: 0.375rem 0.75rem;
 	letter-spacing: .15rem;
 	transition: all .3s linear;
-	font-size: 0.65rem;
-	border: 2px solid rgb(201, 140, 71);
+	font-size: 0.7rem;
+	border: 1px solid rgb(34, 80, 110);
 	cursor: pointer;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 	border-radius: .5rem;
@@ -52,7 +56,7 @@ body {
 }
 .playbtn:hover {
 	color: #fff;
-	background: rgb(201, 140, 71);
+	background: rgb(34, 80, 110);
 }
 .claire {
 	max-width: 400px;
@@ -90,7 +94,7 @@ body {
 }
 .messageTime {
 	font-size: 2.5rem;
-	color: rgb(57, 67, 77);
+	color: rgb(97, 36, 36);
 	font-family: 'Princess Sofia', cursive;
 	padding: 1rem;
 	transition: all .5s linear;
