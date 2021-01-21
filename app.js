@@ -71,7 +71,7 @@ playbtn.addEventListener('click', function() {
 	setTimeout(() => (video.style.opacity = 1), 2000);
 	setTimeout(() => (video.style.opacity = 0), 14200);
 	setTimeout(() => {
-		messageTime.textContent = ` Amelie and Sedki t'aime beaucoup!`;
+		messageTime.textContent = ` Amelie et Sedki te souhaitent un joyeux anniversaire!`;
 		deadline.style.display = 'none';
 	}, 3300);
 });
